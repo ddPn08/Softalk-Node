@@ -1,0 +1,2 @@
+# softalk
+NodeJSでsoftalkを実行するライブラリ

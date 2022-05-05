@@ -1,0 +1,42 @@
+{
+  "name": "softalk-node",
+  "version": "0.1.0",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsup",
+    "format": "prettier './src/**/*.ts' --write"
+  },
+  "devDependencies": {
+    "@tsconfig/node16-strictest-esm": "^1.0.1",
+    "@types/node": "^16.11.10",
+    "prettier": "^2.5.0",
+    "ts-node": "^10.4.0",
+    "tsup": "^5.12.6",
+    "typescript": "next"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts"
+  },
+  "keywords": [
+    "softalk"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "ddpn08",
+    "email": "pyn.g.1125@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddPn08/softalk-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ddPn08/softalk-node/issues"
+  },
+  "homepage": "https://github.com/ddPn08/softalk-node#readme",
+  "packageManager": "yarn@3.1.0"
+}
