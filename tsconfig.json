@@ -1,14 +1,13 @@
 {
-  "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+  "extends": "@tsconfig/node16-strictest-esm",
   "compilerOptions": {
-    "module": "NodeNext",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "esnext",
+    "emitDeclarationOnly": true,
     "declaration": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": [
-        "*"
-      ],
-    }
+    "declarationDir": "./dist",
+    "resolveJsonModule": true
   },
   "include": [
     "src"

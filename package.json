@@ -1,18 +1,18 @@
 {
-  "name": "softalk-node",
-  "version": "0.1.0",
+  "name": "softalk",
+  "version": "0.0.1",
   "main": "./src/index.ts",
   "scripts": {
-    "build": "tsup",
+    "build": "node build.mjs && tsc",
     "format": "prettier './src/**/*.ts' --write"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest-esm": "^1.0.1",
     "@types/node": "^16.11.10",
+    "esbuild": "^0.14.41",
     "prettier": "^2.5.0",
     "ts-node": "^10.4.0",
-    "tsup": "^5.12.6",
-    "typescript": "next"
+    "typescript": "4.7.2"
   },
   "publishConfig": {
     "access": "public",

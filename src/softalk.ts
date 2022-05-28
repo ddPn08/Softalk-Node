@@ -56,9 +56,8 @@ export class SofTalk {
         const ps = spawnSync(this.bin, args)
 
         if (ps.error) throw ps.error
-        if (ps.stderr) throw ps.stderr
 
-        return ps.stdout
+        return `${ps.stdout}${ps.stderr}`
     }
     private run(options: SofTalkExecOptions): Promise<void> {
         return new Promise((resolve, reject) => {
@@ -92,7 +91,7 @@ export class SofTalk {
                 resolve()
             })
             const t = setTimeout(() => {
-                console.log('timeout')
+                console.error('SofTalk.save timeout')
                 watcher.close()
                 if (fs.existsSync(path)) resolve()
                 else reject(new Error('timeout'))
