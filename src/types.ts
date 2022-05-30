@@ -8,12 +8,13 @@ export enum Library {
 
 export type SofTalkExecOptions = {
     text: string
-    voice: number
     read?: boolean
+    voice: number
     pitch?: number
     accent?: number
     interval?: number
     speed?: number
+    volume?: number
     lib: Library | undefined
     file: string | undefined
 }
@@ -24,4 +25,5 @@ export type ReadOptions = {
     accent?: number
     interval?: number
     speed?: number
+    volume?: number
 }

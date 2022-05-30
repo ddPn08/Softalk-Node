@@ -1,24 +1,13 @@
 {
   "name": "softalk",
-  "version": "0.0.1",
-  "main": "./src/index.ts",
-  "scripts": {
-    "build": "node build.mjs && tsc",
-    "format": "prettier './src/**/*.ts' --write"
-  },
-  "devDependencies": {
-    "@tsconfig/node16-strictest-esm": "^1.0.1",
-    "@types/node": "^16.11.10",
-    "esbuild": "^0.14.41",
-    "prettier": "^2.5.0",
-    "ts-node": "^10.4.0",
-    "typescript": "4.7.2"
-  },
-  "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts"
+  "version": "0.0.3",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "default": "./dist/index.js",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
   },
   "keywords": [
     "softalk"
@@ -38,5 +27,17 @@
     "url": "https://github.com/ddPn08/softalk-node/issues"
   },
   "homepage": "https://github.com/ddPn08/softalk-node#readme",
+  "scripts": {
+    "build": "node build.mjs && tsc",
+    "format": "prettier './src/**/*.ts' --write"
+  },
+  "devDependencies": {
+    "@tsconfig/node16-strictest-esm": "^1.0.1",
+    "@types/node": "^16.11.10",
+    "esbuild": "^0.14.41",
+    "prettier": "^2.5.0",
+    "ts-node": "^10.4.0",
+    "typescript": "4.7.2"
+  },
   "packageManager": "yarn@3.1.0"
 }

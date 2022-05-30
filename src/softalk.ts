@@ -26,6 +26,7 @@ export class SofTalk {
             `/K:${options.accent ?? 100}`,
             `/O:${options.interval ?? 100}`,
             `/S:${options.speed ?? 100}`,
+            `/V:${options.volume ?? 100}`,
             options.lib ? `/T:${options.lib}` : '',
             options.file ? `/R:${options.file}` : '',
         ]
