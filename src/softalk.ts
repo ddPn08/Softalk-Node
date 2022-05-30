@@ -12,6 +12,7 @@ export class SofTalk {
             accent: options?.accent ?? 100,
             interval: options?.interval ?? 100,
             speed: options?.speed ?? 100,
+            volume: options?.volume ?? 100,
             read: read ?? true,
             lib,
             file,
